@@ -18,6 +18,24 @@ An AI-powered preventive healthcare platform that detects early signs of **skin 
 
 ---
 
+## 🖼️ UI Preview Gallery
+
+> Below are some screens and features from the live platform.
+
+| Landing Page | Face Scan |
+|--------------|-----------|
+| ![1](./assets/1.png) | ![50](./assets/50.png) |
+
+| Prediction Result | Ayurveda Suggestion |
+|-------------------|---------------------|
+| ![9](./assets/9.png) | ![4](./assets/4.png) |
+
+| Dashboard | Vision Scan |
+|-----------|-------------|
+| ![6](./assets/6.png) | ![2](./assets/2.png) |
+
+---
+
 ## 🧩 Tech Stack
 
 - **Frontend**: React + TailwindCSS + Framer Motion + TensorFlow.js
@@ -33,9 +51,9 @@ Empower individuals to take control of their skin and vision health **before sym
 
 ---
 
-## 📥 Contributions Welcome
+## 🤝 Contributions Welcome
 
-We’re building India’s first holistic preventive care platform. Join us!
+We’re building India’s first holistic preventive care platform. Join us on this mission!
 
 ---
 
