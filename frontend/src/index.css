@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --medical-red: #FF3B30;
+  --medical-blue: #007AFF;
+  --medical-green: #34C759;
+  --medical-orange: #FF9500;
+  --medical-purple: #AF52DE;
+  --medical-pink: #FF2D92;
+  --medical-yellow: #FFCC00;
+  --medical-teal: #5AC8FA;
+  --brutal-black: #000000;
+  --brutal-white: #FFFFFF;
+  --brutal-gray: #8E8E93;
+  --brutal-light-gray: #F2F2F7;
+  --brutal-dark-gray: #1C1C1E;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--brutal-white);
+  color: var(--brutal-black);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* CRITICAL TEXT VISIBILITY FIXES */
+/* Auto text color based on background */
+.text-auto-contrast {
+  color: inherit;
+}
+
+/* Background-specific text colors */
+.bg-white,
+.bg-white *,
+.bg-brutal-white,
+.bg-brutal-white *,
+.bg-brutal-light-gray,
+.bg-brutal-light-gray *,
+.bg-gray-50,
+.bg-gray-50 *,
+.bg-gray-100,
+.bg-gray-100 *,
+.brutal-card {
+  color: #000000 !important;
+}
+
+.bg-black,
+.bg-black *,
+.bg-brutal-black,
+.bg-brutal-black *,
+.bg-gray-900,
+.bg-gray-900 *,
+.bg-medical-red,
+.bg-medical-red *,
+.bg-medical-blue,
+.bg-medical-blue *,
+.bg-medical-green,
+.bg-medical-green *,
+.bg-medical-purple,
+.bg-medical-purple *,
+.bg-medical-orange,
+.bg-medical-orange *,
+.bg-medical-pink,
+.bg-medical-pink *,
+.bg-medical-teal,
+.bg-medical-teal *,
+.bg-brutal-black,
+.bg-brutal-black * {
+  color: #FFFFFF !important;
+}
+
+.bg-medical-yellow,
+.bg-medical-yellow * {
+  color: #000000 !important;
+}
+
+/* Default text colors */
+.text-black {
+  color: #000000 !important;
+}
+
+.text-white {
+  color: #FFFFFF !important;
+}
+
+.text-gray-900 {
+  color: #000000 !important;
+}
+
+.text-gray-800 {
+  color: #000000 !important;
+}
+
+.text-gray-700 {
+  color: #000000 !important;
+}
+
+.text-gray-600 {
+  color: #000000 !important;
+}
+
+.text-brutal-black {
+  color: #000000 !important;
+}
+
+.text-brutal-gray {
+  color: #000000 !important;
+}
+
+/* Chart text visibility */
+.recharts-text {
+  fill: #000000 !important;
+}
+
+.recharts-cartesian-axis-tick-value {
+  fill: #000000 !important;
+}
+
+.recharts-tooltip-wrapper {
+  color: #000000 !important;
+}
+
+.recharts-tooltip-wrapper .recharts-tooltip-item {
+  color: #000000 !important;
+}
+
+.recharts-tooltip-wrapper .recharts-tooltip-label {
+  color: #000000 !important;
+}
+
+/* Neubrutalism Components */
+.brutal-card {
+  background: var(--brutal-white);
+  border: 4px solid var(--brutal-black);
+  box-shadow: 8px 8px 0px var(--brutal-black);
+  transition: all 0.2s ease;
+}
+
+.brutal-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 10px 10px 0px var(--brutal-black);
+}
+
+.brutal-button {
+  background: var(--brutal-black);
+  color: var(--brutal-white);
+  border: 4px solid var(--brutal-black);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+  box-shadow: 4px 4px 0px var(--brutal-black);
+  cursor: pointer;
+}
+
+.brutal-button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--brutal-black);
+}
+
+.brutal-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 4px 4px 0px var(--brutal-black);
+}
+
+.brutal-button-primary {
+  background: var(--medical-blue);
+  border-color: var(--brutal-black);
+  color: var(--brutal-white);
+}
+
+.brutal-button-danger {
+  background: var(--medical-red);
+  border-color: var(--brutal-black);
+  color: var(--brutal-white);
+}
+
+.brutal-button-success {
+  background: var(--medical-green);
+  border-color: var(--brutal-black);
+  color: var(--brutal-white);
+}
+
+.brutal-input {
+  border: 4px solid var(--brutal-black);
+  background: var(--brutal-white);
+  font-weight: 600;
+  transition: all 0.2s ease;
+  color: var(--brutal-black);
+}
+
+.brutal-input:focus {
+  outline: none;
+  box-shadow: 4px 4px 0px var(--medical-blue);
+  transform: translate(-1px, -1px);
+}
+
+.brutal-input::placeholder {
+  color: var(--brutal-gray);
+}
+
+.medical-gradient {
+  background: linear-gradient(135deg, var(--medical-blue) 0%, var(--medical-teal) 100%);
+}
+
+.medical-grid {
+  background-image: 
+    linear-gradient(var(--brutal-black) 1px, transparent 1px),
+    linear-gradient(90deg, var(--brutal-black) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.1;
+}
+
+/* Loading Animations */
+.medical-pulse {
+  animation: medicalPulse 2s infinite;
+}
+
+@keyframes medicalPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.heartbeat {
+  animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* Real-time data effects */
+.data-stream {
+  animation: dataStream 3s infinite linear;
+}
+
+@keyframes dataStream {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.glitch {
+  animation: glitch 0.3s infinite;
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+/* Medical themed elements */
+.ecg-line {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: ecg 3s infinite linear;
+}
+
+@keyframes ecg {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.vital-sign {
+  animation: vitalSign 2s infinite ease-in-out;
+}
+
+@keyframes vitalSign {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(1.2); }
+}
+
+/* Status indicators */
+.status-online {
+  background: var(--medical-green);
+  animation: statusPulse 2s infinite;
+}
+
+.status-warning {
+  background: var(--medical-orange);
+  animation: statusPulse 2s infinite;
+}
+
+.status-critical {
+  background: var(--medical-red);
+  animation: statusPulse 1s infinite;
+}
+
+@keyframes statusPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* Medical chart styling */
+.medical-chart {
+  filter: drop-shadow(4px 4px 0px var(--brutal-black));
+}
+
+/* Typography */
+.medical-title {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 0.9;
+  color: var(--brutal-black) !important;
+}
+
+.medical-subtitle {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.875rem;
+  color: var(--brutal-black) !important;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--brutal-light-gray);
+  border: 2px solid var(--brutal-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--brutal-black);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--medical-blue);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .brutal-card {
+    box-shadow: 4px 4px 0px var(--brutal-black);
+  }
+  
+  .brutal-card:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 5px 5px 0px var(--brutal-black);
+  }
+}
+
+/* Real-time data animations */
+.pulse-data {
+  animation: pulseData 1s infinite;
+}
+
+@keyframes pulseData {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+.slide-in {
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Medical waveform animations */
+.ecg-waveform {
+  animation: ecgWave 2s infinite linear;
+}
+
+@keyframes ecgWave {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.brain-wave {
+  animation: brainWave 3s infinite ease-in-out;
+}
+
+@keyframes brainWave {
+  0%, 100% { opacity: 0.7; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(1.2); }
+}
+
+/* Fix for select elements */
+select {
+  color: var(--brutal-black) !important;
+  background-color: var(--brutal-white) !important;
+}
+
+select option {
+  color: var(--brutal-black) !important;
+  background-color: var(--brutal-white) !important;
+}
+
+/* Fix for form elements */
+input, textarea, select {
+  color: var(--brutal-black) !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--brutal-gray) !important;
+}
+
+/* Link styling */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Button focus states */
+button:focus {
+  outline: 2px solid var(--medical-blue);
+  outline-offset: 2px;
+}
+
+/* Loading spinner */
+.loading-spinner {
+  border: 2px solid var(--brutal-light-gray);
+  border-top: 2px solid var(--medical-blue);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error states */
+.error-text {
+  color: var(--medical-red) !important;
+}
+
+.success-text {
+  color: var(--medical-green) !important;
+}
+
+.warning-text {
+  color: var(--medical-orange) !important;
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .brutal-card {
+    border-width: 6px;
+  }
+  
+  .brutal-button {
+    border-width: 6px;
+  }
+}
