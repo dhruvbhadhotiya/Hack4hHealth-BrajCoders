@@ -24,15 +24,15 @@ An AI-powered preventive healthcare platform that detects early signs of **skin 
 
 | Landing Page | Face Scan |
 |--------------|-----------|
-| ![1](./assets/1.png) | ![50](./assets/50.png) |
+| ![1](./assets/images/1.jpg) | ![50](./assets/images/2.jpg) |
 
 | Prediction Result | Ayurveda Suggestion |
 |-------------------|---------------------|
-| ![9](./assets/9.png) | ![4](./assets/4.png) |
+| ![9](./assets/images/3.jpg) | ![4](./assets/images/4.jpg) |
 
 | Dashboard | Vision Scan |
 |-----------|-------------|
-| ![6](./assets/6.png) | ![2](./assets/2.png) |
+| ![6](./assets/images/7.jpg) | ![2](./assets/images/6.jpg) |
 
 ---
 
